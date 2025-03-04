@@ -1,4 +1,9 @@
-.PHONY: build up benchmark report clean
+.PHONY: build up benchmark report clean lint format
+
+GO_LINTER := golangci-lint
+GO_FORMATTER := gofmt
+
+.DEFAULT_GOAL := build
 
 build:
 	docker-compose build
@@ -7,7 +12,7 @@ up:
 	docker-compose up -d
 
 benchmark:
-	mkdir results
+	mkdir -p results
 	go run loadtester/main.go
 
 report:
@@ -17,3 +22,11 @@ report:
 clean:
 	docker-compose down
 	rm -rf results
+
+lint:
+	$(GO_LINTER) run ./...
+
+format:
+	find . -type f -name '*.go' ! -path './vendor/*' -exec $(GO_FORMATTER) -s -w {} +
+
+check: lint format
