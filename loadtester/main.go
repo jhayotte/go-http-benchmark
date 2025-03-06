@@ -71,6 +71,14 @@ func main() {
 			URL:  "http://localhost:8082", // fasthttp
 			Name: "fasthttp",
 		},
+		{
+			URL:  "http://localhost:8083", // gin
+			Name: "gin",
+		},
+		{
+			URL:  "http://localhost:8084", // echo
+			Name: "echo",
+		},
 	}
 
 	duration := "10s"

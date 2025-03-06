@@ -9,3 +9,12 @@ services:
     ports:
       - "8082:8080"
 
+  gin:
+    build: ./servers/gin
+    ports:
+      - "8083:8080"
+
+  echo:
+    build: ./servers/echo 
+    ports:
+      - "8084:8080"
