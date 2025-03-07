@@ -18,3 +18,8 @@ services:
     build: ./servers/echo 
     ports:
       - "8084:8080"
+
+  mux:
+    build: ./servers/mux 
+    ports:
+      - "8085:8080"

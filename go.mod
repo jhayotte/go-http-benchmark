@@ -4,6 +4,7 @@ go 1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.0
+	github.com/gorilla/mux v1.8.1
 	github.com/labstack/echo/v4 v4.13.3
 	github.com/valyala/fasthttp v1.59.0
 	gonum.org/v1/plot v0.15.0

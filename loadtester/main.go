@@ -79,6 +79,10 @@ func main() {
 			URL:  "http://localhost:8084", // echo
 			Name: "echo",
 		},
+		{
+			URL:  "http://localhost:8085", // mux
+			Name: "mux",
+		},
 	}
 
 	duration := "10s"
