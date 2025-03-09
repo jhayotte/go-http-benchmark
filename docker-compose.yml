@@ -23,3 +23,8 @@ services:
     build: ./servers/mux 
     ports:
       - "8085:8080"
+
+  beego:
+    build: ./servers/beego 
+    ports:
+      - "8086:8080"
