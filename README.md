@@ -5,6 +5,13 @@ This repository contains a performance comparison of different HTTP servers writ
 
 - **`fasthttp`**: A high-performance HTTP package designed to be fast and efficient.
 - **`stdlib`**: Standard library of `net/http`.
+- **`gin`**
+- **`echo`*
+- **`mux`**
+- **`beego`**
+
+![benchmark](results/requests_per_sec.png)
+
 
 ## Project Structure
 
